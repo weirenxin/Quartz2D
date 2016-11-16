@@ -22,16 +22,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDR-iU-lwy" customClass="DrawView" customModule="Quartz2D" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="114" width="375" height="503"/>
+                                <rect key="frame" x="0.0" y="114" width="375" height="353"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAF-QU-xuB">
+                                <rect key="frame" x="10" y="497" width="101.5" height="40"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Mm-hs-q01"/>
+                                </constraints>
+                                <state key="normal" title="下载进度条">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nX1-gr-RVt" kind="show" id="qNZ-L8-MGc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSr-tp-KY0">
+                                <rect key="frame" x="131.5" y="497" width="102" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gwj-4b-GKu"/>
+                                </constraints>
+                                <state key="normal" title="画饼图">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Smc-Ln-ULM" kind="show" id="coG-W4-srE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVa-Iq-Ty6">
+                                <rect key="frame" x="253.5" y="497" width="101.5" height="40"/>
+                                <color key="backgroundColor" red="0.36470588240000001" green="0.64705882349999999" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="i8a-sg-8WC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="HDR-iU-lwy" secondAttribute="trailing" id="40E-WT-S9C"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HDR-iU-lwy" secondAttribute="bottom" constant="50" id="A4d-b7-sgR"/>
+                            <constraint firstAttribute="trailing" secondItem="TVa-Iq-Ty6" secondAttribute="trailing" constant="20" id="4a2-I5-GbU"/>
+                            <constraint firstItem="aSr-tp-KY0" firstAttribute="leading" secondItem="OAF-QU-xuB" secondAttribute="trailing" constant="20" id="9Rt-tA-zdY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HDR-iU-lwy" secondAttribute="bottom" constant="200" id="A4d-b7-sgR"/>
+                            <constraint firstItem="aSr-tp-KY0" firstAttribute="width" secondItem="OAF-QU-xuB" secondAttribute="width" id="IdR-12-mM9"/>
                             <constraint firstItem="HDR-iU-lwy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Nkh-EX-EAW"/>
+                            <constraint firstItem="TVa-Iq-Ty6" firstAttribute="leading" secondItem="aSr-tp-KY0" secondAttribute="trailing" constant="20" id="X3S-Bd-xbD"/>
                             <constraint firstItem="HDR-iU-lwy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aIp-1F-oem"/>
+                            <constraint firstItem="TVa-Iq-Ty6" firstAttribute="top" secondItem="aSr-tp-KY0" secondAttribute="top" id="bAJ-wE-FVu"/>
+                            <constraint firstItem="OAF-QU-xuB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="dJW-Bt-dUM"/>
+                            <constraint firstItem="aSr-tp-KY0" firstAttribute="top" secondItem="OAF-QU-xuB" secondAttribute="top" id="dpQ-S0-IzE"/>
+                            <constraint firstItem="TVa-Iq-Ty6" firstAttribute="width" secondItem="OAF-QU-xuB" secondAttribute="width" id="gs6-PP-72n"/>
+                            <constraint firstItem="OAF-QU-xuB" firstAttribute="top" secondItem="HDR-iU-lwy" secondAttribute="bottom" constant="30" id="h7a-kn-ezy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ow3-DT-MDR"/>
@@ -39,6 +82,94 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079.2" y="137.18140929535232"/>
+        </scene>
+        <!--画饼图-->
+        <scene sceneID="rtH-PU-pxs">
+            <objects>
+                <viewController title="画饼图" id="Smc-Ln-ULM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IzZ-ju-ID3"/>
+                        <viewControllerLayoutGuide type="bottom" id="f3O-ic-DhP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="utl-aG-oeE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Rt-QN-bWf" customClass="PieView" customModule="Quartz2D" customModuleProvider="target">
+                                <rect key="frame" x="37" y="183" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="4JC-ww-yfh"/>
+                                    <constraint firstAttribute="height" constant="300" id="6ib-M5-Vtk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Rt-QN-bWf" firstAttribute="centerY" secondItem="utl-aG-oeE" secondAttribute="centerY" id="B7e-cP-3EG"/>
+                            <constraint firstItem="3Rt-QN-bWf" firstAttribute="centerX" secondItem="utl-aG-oeE" secondAttribute="centerX" id="Od4-l6-voT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JTH-FK-TfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079" y="772"/>
+        </scene>
+        <!--下载进度条-->
+        <scene sceneID="aHi-7s-33R">
+            <objects>
+                <viewController title="下载进度条" id="nX1-gr-RVt" customClass="DownloadVC" customModule="Quartz2D" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yMy-Kn-VJ0"/>
+                        <viewControllerLayoutGuide type="bottom" id="jhM-ci-eMY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I17-A1-5ha">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Tc-kJ-0gT" customClass="ProgressView" customModule="Quartz2D" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="233" width="200" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYF-fc-W8c">
+                                        <rect key="frame" x="83.5" y="92" width="33" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.36470588240000001" green="0.64705882349999999" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lYF-fc-W8c" firstAttribute="centerY" secondItem="6Tc-kJ-0gT" secondAttribute="centerY" id="Ai4-FU-CZv"/>
+                                    <constraint firstAttribute="width" constant="200" id="N0b-Mb-3of"/>
+                                    <constraint firstItem="lYF-fc-W8c" firstAttribute="centerX" secondItem="6Tc-kJ-0gT" secondAttribute="centerX" id="Oho-aF-T5b"/>
+                                    <constraint firstAttribute="height" constant="200" id="djH-OM-Fe7"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="apq-Bf-NIi">
+                                <rect key="frame" x="85" y="483" width="204" height="31"/>
+                                <connections>
+                                    <action selector="valueChange:" destination="nX1-gr-RVt" eventType="valueChanged" id="6sp-rK-NtU"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="apq-Bf-NIi" firstAttribute="top" secondItem="6Tc-kJ-0gT" secondAttribute="bottom" constant="50" id="4QA-I8-Fy3"/>
+                            <constraint firstItem="6Tc-kJ-0gT" firstAttribute="centerX" secondItem="I17-A1-5ha" secondAttribute="centerX" id="Nl1-dt-uZu"/>
+                            <constraint firstItem="apq-Bf-NIi" firstAttribute="centerX" secondItem="I17-A1-5ha" secondAttribute="centerX" id="OfU-MQ-wgt"/>
+                            <constraint firstItem="6Tc-kJ-0gT" firstAttribute="centerY" secondItem="I17-A1-5ha" secondAttribute="centerY" id="p3b-cf-pqr"/>
+                            <constraint firstItem="apq-Bf-NIi" firstAttribute="width" secondItem="6Tc-kJ-0gT" secondAttribute="width" id="rum-p7-wVv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="6Tc-kJ-0gT" id="wPJ-tE-HQk"/>
+                        <outlet property="slider" destination="apq-Bf-NIi" id="pIW-0a-vjM"/>
+                        <outlet property="titleLabel" destination="lYF-fc-W8c" id="RcH-oV-RKy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rAe-St-UCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EBa-QB-bYf">

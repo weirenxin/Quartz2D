@@ -15,6 +15,9 @@
 		F03C96F41DD6AF5F001941CA /* Quartz2DTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03C96F31DD6AF5F001941CA /* Quartz2DTests.swift */; };
 		F03C96FF1DD6AF5F001941CA /* Quartz2DUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03C96FE1DD6AF5F001941CA /* Quartz2DUITests.swift */; };
 		F03C970D1DD6AFEB001941CA /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03C970C1DD6AFEB001941CA /* DrawView.swift */; };
+		F065D0A51DDB0B08006B7107 /* DownloadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065D0A41DDB0B08006B7107 /* DownloadVC.swift */; };
+		F065D0A71DDB0B3B006B7107 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065D0A61DDB0B3B006B7107 /* ProgressView.swift */; };
+		F065D0BA1DDCAF4B006B7107 /* PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065D0B91DDCAF4B006B7107 /* PieView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		F03C96FE1DD6AF5F001941CA /* Quartz2DUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quartz2DUITests.swift; sourceTree = "<group>"; };
 		F03C97001DD6AF5F001941CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F03C970C1DD6AFEB001941CA /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		F065D0A41DDB0B08006B7107 /* DownloadVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadVC.swift; sourceTree = "<group>"; };
+		F065D0A61DDB0B3B006B7107 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		F065D0B91DDCAF4B006B7107 /* PieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				F03C96E01DD6AF5F001941CA /* ViewController.swift */,
 				F03C96E21DD6AF5F001941CA /* Main.storyboard */,
 				F03C970C1DD6AFEB001941CA /* DrawView.swift */,
+				F065D0A41DDB0B08006B7107 /* DownloadVC.swift */,
+				F065D0A61DDB0B3B006B7107 /* ProgressView.swift */,
+				F065D0B91DDCAF4B006B7107 /* PieView.swift */,
 				F03C96E51DD6AF5F001941CA /* Assets.xcassets */,
 				F03C96E71DD6AF5F001941CA /* LaunchScreen.storyboard */,
 				F03C96EA1DD6AF5F001941CA /* Info.plist */,
@@ -265,9 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F065D0A51DDB0B08006B7107 /* DownloadVC.swift in Sources */,
 				F03C96E11DD6AF5F001941CA /* ViewController.swift in Sources */,
+				F065D0A71DDB0B3B006B7107 /* ProgressView.swift in Sources */,
 				F03C96DF1DD6AF5F001941CA /* AppDelegate.swift in Sources */,
 				F03C970D1DD6AFEB001941CA /* DrawView.swift in Sources */,
+				F065D0BA1DDCAF4B006B7107 /* PieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +528,7 @@
 				F03C97051DD6AF5F001941CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F03C97061DD6AF5F001941CA /* Build configuration list for PBXNativeTarget "Quartz2DTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +537,7 @@
 				F03C97081DD6AF5F001941CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F03C97091DD6AF5F001941CA /* Build configuration list for PBXNativeTarget "Quartz2DUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +546,7 @@
 				F03C970B1DD6AF5F001941CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
